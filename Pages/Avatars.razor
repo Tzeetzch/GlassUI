@@ -1,0 +1,125 @@
+@page "/avatars"
+
+<div class="page-header">
+    <h1 class="page-title">Avatars</h1>
+    <p class="page-description">
+        User avatar components with gradient backgrounds and various sizes.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Avatar Sizes</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Size Variants</h3>
+            <p class="glass-card-subtitle">From small to extra large</p>
+        </div>
+        
+        <div class="component-preview">
+            <div class="avatar avatar-sm">S</div>
+            <div class="avatar">M</div>
+            <div class="avatar avatar-lg">L</div>
+            <div class="avatar avatar-xl">XL</div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="avatar avatar-sm"&gt;S&lt;/div&gt;
+&lt;div class="avatar"&gt;M&lt;/div&gt;
+&lt;div class="avatar avatar-lg"&gt;L&lt;/div&gt;
+&lt;div class="avatar avatar-xl"&gt;XL&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Initials</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">User Initials</h3>
+            <p class="glass-card-subtitle">Display user initials when no image is available</p>
+        </div>
+        
+        <div class="component-preview">
+            <div class="avatar">JD</div>
+            <div class="avatar">AK</div>
+            <div class="avatar">MC</div>
+            <div class="avatar">TS</div>
+            <div class="avatar">RW</div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Avatar Group</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Stacked Avatars</h3>
+            <p class="glass-card-subtitle">Show multiple users in a compact format</p>
+        </div>
+        
+        <div class="component-preview">
+            <div class="avatar-group">
+                <div class="avatar">A</div>
+                <div class="avatar">B</div>
+                <div class="avatar">C</div>
+                <div class="avatar">D</div>
+                <div class="avatar">+3</div>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="avatar-group"&gt;
+    &lt;div class="avatar"&gt;A&lt;/div&gt;
+    &lt;div class="avatar"&gt;B&lt;/div&gt;
+    &lt;div class="avatar"&gt;C&lt;/div&gt;
+    &lt;div class="avatar"&gt;+3&lt;/div&gt;
+&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Avatar with Info</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">User Cards</h3>
+            <p class="glass-card-subtitle">Avatars combined with user information</p>
+        </div>
+        
+        <div class="flex flex-col gap-lg" style="max-width: 400px;">
+            <div class="flex items-center gap-md">
+                <div class="avatar avatar-lg">JD</div>
+                <div>
+                    <h4 style="margin: 0;">John Doe</h4>
+                    <p style="margin: 0; color: var(--text-tertiary); font-size: 0.875rem;">Software Engineer</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-md">
+                <div class="avatar avatar-lg">AS</div>
+                <div>
+                    <h4 style="margin: 0;">Alice Smith</h4>
+                    <p style="margin: 0; color: var(--text-tertiary); font-size: 0.875rem;">Product Designer</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-md">
+                <div class="avatar avatar-lg">MJ</div>
+                <div>
+                    <h4 style="margin: 0;">Mike Johnson</h4>
+                    <p style="margin: 0; color: var(--text-tertiary); font-size: 0.875rem;">Team Lead</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

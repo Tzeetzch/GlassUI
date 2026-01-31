@@ -1,0 +1,137 @@
+@page "/modals"
+
+<div class="page-header">
+    <h1 class="page-title">Modals</h1>
+    <p class="page-description">
+        Modal dialog components with backdrop blur and glassmorphism styling.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Modal Preview</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Static Modal Example</h3>
+            <p class="glass-card-subtitle">This is a static preview of the modal component</p>
+        </div>
+        
+        <div style="background: var(--bg-primary); border-radius: var(--radius-xl); padding: var(--spacing-2xl); position: relative; min-height: 400px;">
+            <div style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); position: absolute; inset: 0; border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center;">
+                <div class="modal" style="position: relative;">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Modal Title</h3>
+                        <button class="modal-close">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is the modal content. You can put any content here, including forms, messages, or other components.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-ghost">Cancel</button>
+                        <button class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="modal-backdrop"&gt;
+    &lt;div class="modal"&gt;
+        &lt;div class="modal-header"&gt;
+            &lt;h3 class="modal-title"&gt;Modal Title&lt;/h3&gt;
+            &lt;button class="modal-close"&gt;×&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+            &lt;p&gt;Modal content here.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+            &lt;button class="btn btn-ghost"&gt;Cancel&lt;/button&gt;
+            &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Interactive Modal</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Live Demo</h3>
+            <p class="glass-card-subtitle">Click the button to open a modal</p>
+        </div>
+        
+        <button class="btn btn-primary" @onclick="OpenModal">Open Modal</button>
+    </div>
+</section>
+
+@if (isModalOpen)
+{
+    <div class="modal-backdrop" @onclick="CloseModal">
+        <div class="modal" @onclick:stopPropagation="true">
+            <div class="modal-header">
+                <h3 class="modal-title">Hello from GlassUI!</h3>
+                <button class="modal-close" @onclick="CloseModal">×</button>
+            </div>
+            <div class="modal-body">
+                <p>This is an interactive modal built with Blazor. It features the beautiful glassmorphism styling and can be customized to fit your needs.</p>
+                <div class="input-group mt-lg">
+                    <label class="input-label">Your Name</label>
+                    <input type="text" class="input" placeholder="Enter your name" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" @onclick="CloseModal">Cancel</button>
+                <button class="btn btn-primary" @onclick="CloseModal">Submit</button>
+            </div>
+        </div>
+    </div>
+}
+
+<section class="section">
+    <h2 class="section-title">Confirmation Modal</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Delete Confirmation</h3>
+            <p class="glass-card-subtitle">Example of a dangerous action confirmation</p>
+        </div>
+        
+        <div style="background: var(--bg-primary); border-radius: var(--radius-xl); padding: var(--spacing-2xl); position: relative; min-height: 300px;">
+            <div style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); position: absolute; inset: 0; border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center;">
+                <div class="modal" style="position: relative; text-align: center;">
+                    <div style="width: 64px; height: 64px; background: rgba(239, 68, 68, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
+                        <svg width="32" height="32" fill="none" stroke="#ef4444" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                        </svg>
+                    </div>
+                    <h3 class="modal-title" style="margin-bottom: var(--spacing-sm);">Delete Item?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl);">This action cannot be undone.</p>
+                    <div class="flex gap-md justify-center">
+                        <button class="btn btn-ghost">Cancel</button>
+                        <button class="btn" style="background: #ef4444; color: white;">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private bool isModalOpen = false;
+    
+    private void OpenModal()
+    {
+        isModalOpen = true;
+    }
+    
+    private void CloseModal()
+    {
+        isModalOpen = false;
+    }
+}

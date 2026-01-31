@@ -1,0 +1,235 @@
+@page "/backgrounds"
+
+<div class="page-header">
+    <h1 class="page-title">Backgrounds</h1>
+    <p class="page-description">
+        Explore different background styles. Click on any option to preview it across the entire site.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Choose Your Background</h2>
+    
+    <div class="component-grid">
+        @foreach (var bg in backgrounds)
+        {
+            <div class="glass-card @(currentBackground == bg.Key ? "glow-purple" : "")" 
+                 style="cursor: pointer;" 
+                 @onclick="() => SetBackground(bg.Key)">
+                <div class="bg-preview @bg.Key">
+                    <div class="bg-preview-inner">
+                        <div class="ambient-orb ambient-orb-1"></div>
+                        <div class="ambient-orb ambient-orb-2"></div>
+                        <div class="ambient-orb ambient-orb-3"></div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-md">
+                    <div>
+                        <h4 style="margin: 0;">@bg.Value.Name</h4>
+                        <p style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary);">@bg.Value.Description</p>
+                    </div>
+                    @if (currentBackground == bg.Key)
+                    {
+                        <span class="badge badge-primary">Active</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Usage</h2>
+    
+    <div class="glass-card">
+        <p class="mb-md">To use a background style, add the class to your <code>&lt;body&gt;</code> or root element:</p>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;body class="@currentBackground"&gt;
+    &lt;div class="ambient-bg"&gt;
+        &lt;div class="ambient-orb ambient-orb-1"&gt;&lt;/div&gt;
+        &lt;div class="ambient-orb ambient-orb-2"&gt;&lt;/div&gt;
+        &lt;div class="ambient-orb ambient-orb-3"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/body&gt;</code></div>
+        </div>
+        
+        <div class="alert alert-info mt-lg">
+            <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--gradient-cyan);">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <div class="alert-content">
+                <div class="alert-title">Note</div>
+                <div class="alert-message">Some backgrounds like "Solid" and "Grid" don't use the orb elements, but they won't cause any issues if present.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-preview {
+        height: 120px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        position: relative;
+        background: var(--bg-primary);
+    }
+    
+    .bg-preview-inner {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+    
+    /* Preview-specific orb scaling */
+    .bg-preview .ambient-orb {
+        transform: scale(0.15);
+    }
+    
+    .bg-preview.bg-orbs .ambient-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(15px);
+        opacity: 0.6;
+    }
+    
+    .bg-preview.bg-orbs .ambient-orb-1 {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, var(--gradient-purple), var(--gradient-magenta));
+        top: -20px;
+        right: -10px;
+        transform: none;
+    }
+    
+    .bg-preview.bg-orbs .ambient-orb-2 {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--gradient-cyan), var(--gradient-teal));
+        bottom: -20px;
+        left: -10px;
+        transform: none;
+    }
+    
+    .bg-preview.bg-orbs .ambient-orb-3 {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-cyan));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.4;
+    }
+    
+    .bg-preview.bg-solid .bg-preview-inner {
+        background: var(--bg-primary);
+    }
+    .bg-preview.bg-solid .ambient-orb { display: none; }
+    
+    .bg-preview.bg-gradient .bg-preview-inner {
+        background: linear-gradient(135deg, var(--bg-primary) 0%, #0f0a1a 25%, #0a0f1a 50%, #0a1a1a 75%, var(--bg-primary) 100%);
+    }
+    .bg-preview.bg-gradient .ambient-orb { display: none; }
+    
+    .bg-preview.bg-dimmed .ambient-orb {
+        filter: blur(20px);
+        opacity: 0.3;
+    }
+    .bg-preview.bg-dimmed .ambient-orb-3 { display: none; }
+    
+    .bg-preview.bg-grid .bg-preview-inner {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 15px 15px;
+    }
+    .bg-preview.bg-grid .ambient-orb { display: none; }
+    
+    .bg-preview.bg-dots .bg-preview-inner {
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 10px 10px;
+    }
+    .bg-preview.bg-dots .ambient-orb { display: none; }
+    
+    .bg-preview.bg-noise .bg-preview-inner {
+        opacity: 0.5;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    .bg-preview.bg-noise .ambient-orb { display: none; }
+    
+    .bg-preview.bg-mesh .bg-preview-inner {
+        background: radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+                    radial-gradient(ellipse at 40% 70%, rgba(217, 70, 239, 0.15) 0%, transparent 40%);
+    }
+    .bg-preview.bg-mesh .ambient-orb { display: none; }
+    
+    .bg-preview.bg-aurora .bg-preview-inner {
+        background: linear-gradient(45deg, transparent 20%, rgba(139, 92, 246, 0.15) 35%, rgba(6, 182, 212, 0.15) 50%, rgba(217, 70, 239, 0.1) 65%, transparent 80%);
+    }
+    .bg-preview.bg-aurora .ambient-orb { display: none; }
+    
+    .bg-preview.bg-constellation .bg-preview-inner {
+        background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                          radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+                          radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+                          radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+                          radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 2px, transparent 2px);
+    }
+    .bg-preview.bg-constellation .ambient-orb { display: none; }
+    
+    .bg-preview.bg-vignette .bg-preview-inner {
+        background: radial-gradient(ellipse at center, var(--bg-primary) 0%, #000000 100%);
+    }
+    .bg-preview.bg-vignette .ambient-orb { display: none; }
+    
+    .bg-preview.bg-combo .bg-preview-inner {
+        background: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+        background-size: 12px 12px, 12px 12px, 100% 100%, 100% 100%;
+    }
+    .bg-preview.bg-combo .ambient-orb { display: none; }
+</style>
+
+@code {
+    private string currentBackground = "bg-orbs";
+    
+    private Dictionary<string, (string Name, string Description)> backgrounds = new()
+    {
+        { "bg-orbs", ("Floating Orbs", "Animated gradient orbs (original)") },
+        { "bg-solid", ("Solid Dark", "Clean, minimal background") },
+        { "bg-gradient", ("Subtle Gradient", "Soft color transitions") },
+        { "bg-dimmed", ("Dimmed Orbs", "Static, subtle orbs") },
+        { "bg-grid", ("Grid Pattern", "Technical grid lines") },
+        { "bg-dots", ("Dot Pattern", "Subtle dot matrix") },
+        { "bg-noise", ("Noise Texture", "Grainy film texture") },
+        { "bg-mesh", ("Mesh Gradient", "Static color blobs") },
+        { "bg-aurora", ("Aurora", "Slow moving lights") },
+        { "bg-constellation", ("Constellation", "Starry night effect") },
+        { "bg-vignette", ("Vignette", "Dark edges fade") },
+        { "bg-combo", ("Grid + Mesh", "Combined effects") }
+    };
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await SetBackground(currentBackground);
+        }
+    }
+    
+    private async Task SetBackground(string bgClass)
+    {
+        currentBackground = bgClass;
+        await JS.InvokeVoidAsync("setBodyClass", bgClass);
+        StateHasChanged();
+    }
+    
+    [Inject]
+    private IJSRuntime JS { get; set; } = default!;
+}

@@ -1,0 +1,154 @@
+@page "/colors"
+
+<div class="page-header">
+    <h1 class="page-title">Colors</h1>
+    <p class="page-description">
+        The color palette that powers GlassUI. Carefully selected to create a cohesive dark theme with vibrant accents.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Background Colors</h2>
+    
+    <div class="component-grid">
+        <div class="glass-card">
+            <div style="background: var(--bg-primary); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md); border: 1px solid var(--border-glass);"></div>
+            <h4>Primary Background</h4>
+            <p><code>#0a0a0f</code></p>
+            <p class="mt-sm">--bg-primary</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--bg-secondary); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md); border: 1px solid var(--border-glass);"></div>
+            <h4>Secondary Background</h4>
+            <p><code>#12121a</code></p>
+            <p class="mt-sm">--bg-secondary</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--bg-tertiary); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md); border: 1px solid var(--border-glass);"></div>
+            <h4>Tertiary Background</h4>
+            <p><code>#1a1a25</code></p>
+            <p class="mt-sm">--bg-tertiary</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--bg-glass); backdrop-filter: blur(16px); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md); border: 1px solid var(--border-glass);"></div>
+            <h4>Glass Background</h4>
+            <p><code>rgba(255, 255, 255, 0.03)</code></p>
+            <p class="mt-sm">--bg-glass</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Gradient Colors</h2>
+    
+    <div class="component-grid">
+        <div class="glass-card">
+            <div style="background: var(--gradient-purple); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);"></div>
+            <h4>Purple</h4>
+            <p><code>#8b5cf6</code></p>
+            <p class="mt-sm">--gradient-purple</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--gradient-magenta); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);"></div>
+            <h4>Magenta</h4>
+            <p><code>#d946ef</code></p>
+            <p class="mt-sm">--gradient-magenta</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--gradient-cyan); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);"></div>
+            <h4>Cyan</h4>
+            <p><code>#06b6d4</code></p>
+            <p class="mt-sm">--gradient-cyan</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--gradient-teal); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);"></div>
+            <h4>Teal</h4>
+            <p><code>#14b8a6</code></p>
+            <p class="mt-sm">--gradient-teal</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: var(--gradient-blue); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);"></div>
+            <h4>Blue</h4>
+            <p><code>#3b82f6</code></p>
+            <p class="mt-sm">--gradient-blue</p>
+        </div>
+        
+        <div class="glass-card">
+            <div style="background: linear-gradient(135deg, var(--gradient-purple), var(--gradient-cyan)); height: 80px; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);"></div>
+            <h4>Primary Gradient</h4>
+            <p><code>purple → cyan</code></p>
+            <p class="mt-sm">Main accent gradient</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Text Colors</h2>
+    
+    <div class="glass-card">
+        <div class="flex flex-col gap-lg">
+            <div class="flex items-center gap-lg">
+                <div style="width: 48px; height: 48px; background: var(--text-primary); border-radius: var(--radius-md);"></div>
+                <div>
+                    <h4 style="color: var(--text-primary);">Primary Text</h4>
+                    <p><code>#ffffff</code> — --text-primary</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-lg">
+                <div style="width: 48px; height: 48px; background: var(--text-secondary); border-radius: var(--radius-md);"></div>
+                <div>
+                    <h4 style="color: var(--text-secondary);">Secondary Text</h4>
+                    <p><code>rgba(255, 255, 255, 0.7)</code> — --text-secondary</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-lg">
+                <div style="width: 48px; height: 48px; background: var(--text-tertiary); border-radius: var(--radius-md);"></div>
+                <div>
+                    <h4 style="color: var(--text-tertiary);">Tertiary Text</h4>
+                    <p><code>rgba(255, 255, 255, 0.5)</code> — --text-tertiary</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-lg">
+                <div style="width: 48px; height: 48px; background: var(--text-muted); border-radius: var(--radius-md);"></div>
+                <div>
+                    <h4 style="color: var(--text-muted);">Muted Text</h4>
+                    <p><code>rgba(255, 255, 255, 0.3)</code> — --text-muted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Glow Effects</h2>
+    
+    <div class="component-grid">
+        <div class="glass-card" style="box-shadow: 0 0 40px var(--glow-purple);">
+            <h4>Purple Glow</h4>
+            <p>--glow-purple</p>
+            <p class="mt-sm"><code>rgba(139, 92, 246, 0.4)</code></p>
+        </div>
+        
+        <div class="glass-card" style="box-shadow: 0 0 40px var(--glow-cyan);">
+            <h4>Cyan Glow</h4>
+            <p>--glow-cyan</p>
+            <p class="mt-sm"><code>rgba(6, 182, 212, 0.4)</code></p>
+        </div>
+        
+        <div class="glass-card" style="box-shadow: 0 0 40px var(--glow-magenta);">
+            <h4>Magenta Glow</h4>
+            <p>--glow-magenta</p>
+            <p class="mt-sm"><code>rgba(217, 70, 239, 0.4)</code></p>
+        </div>
+    </div>
+</section>

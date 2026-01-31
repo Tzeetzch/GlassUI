@@ -1,0 +1,152 @@
+@page "/cards"
+
+<div class="page-header">
+    <h1 class="page-title">Cards</h1>
+    <p class="page-description">
+        Glass card components for organizing content with beautiful frosted glass effects.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Basic Card</h2>
+    
+    <div class="component-grid">
+        <div class="glass-card">
+            <h3 class="glass-card-title">Simple Card</h3>
+            <p>This is a basic glass card with a subtle background, border, and hover glow effect.</p>
+        </div>
+        
+        <div class="glass-card">
+            <h3 class="glass-card-title">Another Card</h3>
+            <p>Cards automatically adjust to their content and have smooth hover transitions.</p>
+        </div>
+    </div>
+    
+    <div class="code-block mt-lg">
+        <div class="code-header">
+            <span class="code-language">HTML</span>
+        </div>
+        <div class="code-content"><code>&lt;div class="glass-card"&gt;
+    &lt;h3 class="glass-card-title"&gt;Card Title&lt;/h3&gt;
+    &lt;p&gt;Card content goes here.&lt;/p&gt;
+&lt;/div&gt;</code></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Card with Header</h2>
+    
+    <div class="glass-card" style="max-width: 500px;">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Card Title</h3>
+            <p class="glass-card-subtitle">A short subtitle or description</p>
+        </div>
+        <p>The card body content appears below the header, which is separated by a subtle border.</p>
+        <div class="mt-lg">
+            <button class="btn btn-primary btn-sm">Action</button>
+            <button class="btn btn-ghost btn-sm">Cancel</button>
+        </div>
+    </div>
+    
+    <div class="code-block mt-lg">
+        <div class="code-header">
+            <span class="code-language">HTML</span>
+        </div>
+        <div class="code-content"><code>&lt;div class="glass-card"&gt;
+    &lt;div class="glass-card-header"&gt;
+        &lt;h3 class="glass-card-title"&gt;Card Title&lt;/h3&gt;
+        &lt;p class="glass-card-subtitle"&gt;Subtitle&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Card body content.&lt;/p&gt;
+&lt;/div&gt;</code></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Feature Cards</h2>
+    
+    <div class="feature-grid">
+        <div class="glass-card feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title">Fast Performance</h3>
+            <p class="feature-description">
+                Optimized for speed with minimal CSS and no JavaScript dependencies.
+            </p>
+        </div>
+        
+        <div class="glass-card feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3 class="feature-title">Easy to Use</h3>
+            <p class="feature-description">
+                Simple class-based API that's easy to learn and remember.
+            </p>
+        </div>
+        
+        <div class="glass-card feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3 class="feature-title">Customizable</h3>
+            <p class="feature-description">
+                CSS variables make it easy to customize colors and styles.
+            </p>
+        </div>
+    </div>
+    
+    <div class="code-block mt-lg">
+        <div class="code-header">
+            <span class="code-language">HTML</span>
+        </div>
+        <div class="code-content"><code>&lt;div class="glass-card feature-card"&gt;
+    &lt;div class="feature-icon"&gt;🚀&lt;/div&gt;
+    &lt;h3 class="feature-title"&gt;Feature Title&lt;/h3&gt;
+    &lt;p class="feature-description"&gt;Feature description.&lt;/p&gt;
+&lt;/div&gt;</code></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Glowing Cards</h2>
+    
+    <div class="component-grid">
+        <div class="glass-card glow-purple">
+            <h3 class="glass-card-title">Purple Glow</h3>
+            <p>This card has a purple glow effect applied.</p>
+        </div>
+        
+        <div class="glass-card glow-cyan">
+            <h3 class="glass-card-title">Cyan Glow</h3>
+            <p>This card has a cyan glow effect applied.</p>
+        </div>
+    </div>
+    
+    <div class="code-block mt-lg">
+        <div class="code-header">
+            <span class="code-language">HTML</span>
+        </div>
+        <div class="code-content"><code>&lt;div class="glass-card glow-purple"&gt;...&lt;/div&gt;
+&lt;div class="glass-card glow-cyan"&gt;...&lt;/div&gt;</code></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Stats Cards</h2>
+    
+    <div class="component-grid">
+        <div class="glass-card">
+            <p class="text-muted" style="color: var(--text-muted); font-size: 0.875rem;">Total Users</p>
+            <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0;">12,847</h2>
+            <p style="color: var(--gradient-teal); font-size: 0.875rem;">↑ 12% from last month</p>
+        </div>
+        
+        <div class="glass-card">
+            <p class="text-muted" style="color: var(--text-muted); font-size: 0.875rem;">Revenue</p>
+            <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0;">$45,231</h2>
+            <p style="color: var(--gradient-teal); font-size: 0.875rem;">↑ 8% from last month</p>
+        </div>
+        
+        <div class="glass-card">
+            <p class="text-muted" style="color: var(--text-muted); font-size: 0.875rem;">Active Projects</p>
+            <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0;">23</h2>
+            <p style="color: #ef4444; font-size: 0.875rem;">↓ 3 from last month</p>
+        </div>
+    </div>
+</section>

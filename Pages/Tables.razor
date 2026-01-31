@@ -1,0 +1,194 @@
+@page "/tables"
+
+<div class="page-header">
+    <h1 class="page-title">Tables</h1>
+    <p class="page-description">
+        Data table components with glassmorphism styling for displaying structured information.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Basic Table</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Users Table</h3>
+            <p class="glass-card-subtitle">Displaying user data in a structured format</p>
+        </div>
+        
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-md">
+                                <div class="avatar avatar-sm">JD</div>
+                                <span>John Doe</span>
+                            </div>
+                        </td>
+                        <td>john@example.com</td>
+                        <td>Admin</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-md">
+                                <div class="avatar avatar-sm">AS</div>
+                                <span>Alice Smith</span>
+                            </div>
+                        </td>
+                        <td>alice@example.com</td>
+                        <td>Editor</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-md">
+                                <div class="avatar avatar-sm">BJ</div>
+                                <span>Bob Johnson</span>
+                            </div>
+                        </td>
+                        <td>bob@example.com</td>
+                        <td>Viewer</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-md">
+                                <div class="avatar avatar-sm">CW</div>
+                                <span>Carol White</span>
+                            </div>
+                        </td>
+                        <td>carol@example.com</td>
+                        <td>Editor</td>
+                        <td><span class="badge badge-danger">Inactive</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="table-wrapper"&gt;
+    &lt;table class="table"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Header&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Data&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Table with Actions</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <div class="flex justify-between items-center w-full">
+                <div>
+                    <h3 class="glass-card-title">Projects</h3>
+                    <p class="glass-card-subtitle">Manage your projects</p>
+                </div>
+                <button class="btn btn-primary btn-sm">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    Add Project
+                </button>
+            </div>
+        </div>
+        
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Progress</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <div style="font-weight: 500;">Website Redesign</div>
+                                <div style="font-size: 0.875rem; color: var(--text-tertiary);">Marketing</div>
+                            </div>
+                        </td>
+                        <td style="width: 200px;">
+                            <div class="progress" style="width: 150px;">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                        </td>
+                        <td>Feb 15, 2026</td>
+                        <td>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-ghost btn-sm">Edit</button>
+                                <button class="btn btn-ghost btn-sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <div style="font-weight: 500;">Mobile App</div>
+                                <div style="font-size: 0.875rem; color: var(--text-tertiary);">Development</div>
+                            </div>
+                        </td>
+                        <td style="width: 200px;">
+                            <div class="progress" style="width: 150px;">
+                                <div class="progress-bar" style="width: 45%;"></div>
+                            </div>
+                        </td>
+                        <td>Mar 01, 2026</td>
+                        <td>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-ghost btn-sm">Edit</button>
+                                <button class="btn btn-ghost btn-sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <div style="font-weight: 500;">API Integration</div>
+                                <div style="font-size: 0.875rem; color: var(--text-tertiary);">Backend</div>
+                            </div>
+                        </td>
+                        <td style="width: 200px;">
+                            <div class="progress" style="width: 150px;">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                        </td>
+                        <td>Jan 31, 2026</td>
+                        <td>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-ghost btn-sm">Edit</button>
+                                <button class="btn btn-ghost btn-sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

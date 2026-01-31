@@ -1,0 +1,218 @@
+@page "/inputs"
+
+<div class="page-header">
+    <h1 class="page-title">Inputs</h1>
+    <p class="page-description">
+        Form input components with glassmorphism styling, focus glow effects, and smooth transitions.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Text Inputs</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Basic Input</h3>
+            <p class="glass-card-subtitle">Standard text input with glass styling</p>
+        </div>
+        
+        <div style="max-width: 400px;">
+            <div class="input-group">
+                <label class="input-label">Email Address</label>
+                <input type="email" class="input" placeholder="you@example.com" />
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label">Password</label>
+                <input type="password" class="input" placeholder="Enter your password" />
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="input-group"&gt;
+    &lt;label class="input-label"&gt;Email Address&lt;/label&gt;
+    &lt;input type="email" class="input" placeholder="you@example.com" /&gt;
+&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Textarea</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Multi-line Input</h3>
+            <p class="glass-card-subtitle">For longer text content</p>
+        </div>
+        
+        <div style="max-width: 500px;">
+            <div class="input-group">
+                <label class="input-label">Message</label>
+                <textarea class="input textarea" placeholder="Write your message here..."></textarea>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;textarea class="input textarea" placeholder="Write your message..."&gt;&lt;/textarea&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Select</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Dropdown Select</h3>
+            <p class="glass-card-subtitle">For selecting from a list of options</p>
+        </div>
+        
+        <div style="max-width: 300px;">
+            <div class="input-group">
+                <label class="input-label">Choose an option</label>
+                <select class="input select">
+                    <option value="">Select...</option>
+                    <option value="1">Option One</option>
+                    <option value="2">Option Two</option>
+                    <option value="3">Option Three</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;select class="input select"&gt;
+    &lt;option value=""&gt;Select...&lt;/option&gt;
+    &lt;option value="1"&gt;Option One&lt;/option&gt;
+&lt;/select&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Checkbox & Radio</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Selection Controls</h3>
+            <p class="glass-card-subtitle">Checkboxes and radio buttons with gradient styling</p>
+        </div>
+        
+        <div class="flex gap-xl flex-wrap">
+            <div>
+                <h4 class="mb-md">Checkboxes</h4>
+                <div class="flex flex-col gap-md">
+                    <label class="checkbox-group">
+                        <input type="checkbox" class="checkbox" checked />
+                        <span>Option A</span>
+                    </label>
+                    <label class="checkbox-group">
+                        <input type="checkbox" class="checkbox" />
+                        <span>Option B</span>
+                    </label>
+                    <label class="checkbox-group">
+                        <input type="checkbox" class="checkbox" />
+                        <span>Option C</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="mb-md">Radio Buttons</h4>
+                <div class="flex flex-col gap-md">
+                    <label class="radio-group">
+                        <input type="radio" name="radio-demo" class="radio" checked />
+                        <span>Choice 1</span>
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" name="radio-demo" class="radio" />
+                        <span>Choice 2</span>
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" name="radio-demo" class="radio" />
+                        <span>Choice 3</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;label class="checkbox-group"&gt;
+    &lt;input type="checkbox" class="checkbox" checked /&gt;
+    &lt;span&gt;Option A&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="radio-group"&gt;
+    &lt;input type="radio" name="group" class="radio" /&gt;
+    &lt;span&gt;Choice 1&lt;/span&gt;
+&lt;/label&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Toggle Switch</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">On/Off Toggle</h3>
+            <p class="glass-card-subtitle">Click to toggle state (uses JavaScript for interactivity)</p>
+        </div>
+        
+        <div class="flex items-center gap-xl">
+            <div class="flex items-center gap-md">
+                <div class="toggle" onclick="this.classList.toggle('active')"></div>
+                <span>Off</span>
+            </div>
+            <div class="flex items-center gap-md">
+                <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+                <span>On</span>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="toggle"&gt;&lt;/div&gt;
+&lt;div class="toggle active"&gt;&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Glow Input</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Input with Glow Effect</h3>
+            <p class="glass-card-subtitle">For highlighting important inputs</p>
+        </div>
+        
+        <div style="max-width: 400px;">
+            <div class="input-group">
+                <label class="input-label">Special Input</label>
+                <input type="text" class="input input-glow" placeholder="I have a glow!" />
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;input type="text" class="input input-glow" placeholder="I have a glow!" /&gt;</code></div>
+        </div>
+    </div>
+</section>

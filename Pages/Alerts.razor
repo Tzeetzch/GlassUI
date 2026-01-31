@@ -1,0 +1,124 @@
+@page "/alerts"
+
+<div class="page-header">
+    <h1 class="page-title">Alerts</h1>
+    <p class="page-description">
+        Notification and alert components for displaying important messages to users.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Alert Types</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Status Alerts</h3>
+            <p class="glass-card-subtitle">Different styles for different message types</p>
+        </div>
+        
+        <div class="flex flex-col gap-lg">
+            <div class="alert alert-info">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--gradient-cyan);">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div class="alert-content">
+                    <div class="alert-title">Information</div>
+                    <div class="alert-message">This is an informational message for the user.</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-success">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--gradient-teal);">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div class="alert-content">
+                    <div class="alert-title">Success</div>
+                    <div class="alert-message">Your changes have been saved successfully.</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-warning">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #f59e0b;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+                <div class="alert-content">
+                    <div class="alert-title">Warning</div>
+                    <div class="alert-message">Please review this before continuing.</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-danger">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #ef4444;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div class="alert-content">
+                    <div class="alert-title">Error</div>
+                    <div class="alert-message">Something went wrong. Please try again.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="alert alert-info"&gt;
+    &lt;svg class="alert-icon"&gt;...&lt;/svg&gt;
+    &lt;div class="alert-content"&gt;
+        &lt;div class="alert-title"&gt;Title&lt;/div&gt;
+        &lt;div class="alert-message"&gt;Message text&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Simple Alerts</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Message Only</h3>
+            <p class="glass-card-subtitle">Alerts without titles</p>
+        </div>
+        
+        <div class="flex flex-col gap-lg">
+            <div class="alert alert-info">
+                <div class="alert-content">
+                    <div class="alert-message">A simple informational message.</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-success">
+                <div class="alert-content">
+                    <div class="alert-message">Operation completed successfully!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Alert with Action</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Actionable Alerts</h3>
+            <p class="glass-card-subtitle">Include buttons for user actions</p>
+        </div>
+        
+        <div class="alert alert-warning">
+            <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #f59e0b;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <div class="alert-content">
+                <div class="alert-title">Unsaved Changes</div>
+                <div class="alert-message">You have unsaved changes. Do you want to save them before leaving?</div>
+                <div class="mt-md">
+                    <button class="btn btn-primary btn-sm">Save Changes</button>
+                    <button class="btn btn-ghost btn-sm">Discard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

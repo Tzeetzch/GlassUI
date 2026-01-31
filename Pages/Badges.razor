@@ -1,0 +1,115 @@
+@page "/badges"
+
+<div class="page-header">
+    <h1 class="page-title">Badges</h1>
+    <p class="page-description">
+        Small status indicators and labels with gradient backgrounds and subtle styling.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Badge Variants</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Status Badges</h3>
+            <p class="glass-card-subtitle">Different colors for different statuses</p>
+        </div>
+        
+        <div class="component-preview">
+            <span class="badge">Default</span>
+            <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-success">Success</span>
+            <span class="badge badge-warning">Warning</span>
+            <span class="badge badge-danger">Danger</span>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;span class="badge"&gt;Default&lt;/span&gt;
+&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Badges in Context</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">With Headings</h3>
+            <p class="glass-card-subtitle">Badges work great alongside text</p>
+        </div>
+        
+        <div class="flex flex-col gap-lg">
+            <div class="flex items-center gap-md">
+                <h3 style="margin: 0;">Feature Update</h3>
+                <span class="badge badge-primary">New</span>
+            </div>
+            
+            <div class="flex items-center gap-md">
+                <h3 style="margin: 0;">API Status</h3>
+                <span class="badge badge-success">Online</span>
+            </div>
+            
+            <div class="flex items-center gap-md">
+                <h3 style="margin: 0;">Beta Feature</h3>
+                <span class="badge badge-warning">Experimental</span>
+            </div>
+            
+            <div class="flex items-center gap-md">
+                <h3 style="margin: 0;">Deprecated</h3>
+                <span class="badge badge-danger">Removed</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Badges with Buttons</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Notification Counts</h3>
+            <p class="glass-card-subtitle">Badges can indicate counts or notifications</p>
+        </div>
+        
+        <div class="component-preview">
+            <button class="btn btn-secondary" style="position: relative;">
+                Messages
+                <span class="badge badge-primary" style="margin-left: 8px;">5</span>
+            </button>
+            
+            <button class="btn btn-secondary" style="position: relative;">
+                Notifications
+                <span class="badge badge-danger" style="margin-left: 8px;">12</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Tag List</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Multiple Tags</h3>
+            <p class="glass-card-subtitle">Display a list of tags or categories</p>
+        </div>
+        
+        <div class="flex gap-sm flex-wrap">
+            <span class="badge badge-primary">Blazor</span>
+            <span class="badge badge-primary">C#</span>
+            <span class="badge badge-primary">.NET</span>
+            <span class="badge badge-success">CSS</span>
+            <span class="badge badge-success">Glassmorphism</span>
+            <span class="badge">Dark Mode</span>
+            <span class="badge">Responsive</span>
+        </div>
+    </div>
+</section>

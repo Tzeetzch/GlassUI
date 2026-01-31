@@ -1,0 +1,131 @@
+@page "/progress"
+
+<div class="page-header">
+    <h1 class="page-title">Progress</h1>
+    <p class="page-description">
+        Progress bar components with gradient styling for indicating completion status.
+    </p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Progress Bars</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Basic Progress</h3>
+            <p class="glass-card-subtitle">Gradient progress bars at various levels</p>
+        </div>
+        
+        <div class="flex flex-col gap-xl" style="max-width: 500px;">
+            <div>
+                <div class="flex justify-between mb-sm">
+                    <span>Progress</span>
+                    <span>25%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 25%;"></div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between mb-sm">
+                    <span>Progress</span>
+                    <span>50%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between mb-sm">
+                    <span>Progress</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between mb-sm">
+                    <span>Complete</span>
+                    <span>100%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="progress"&gt;
+    &lt;div class="progress-bar" style="width: 75%;"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Skeleton Loading</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Loading Placeholders</h3>
+            <p class="glass-card-subtitle">Skeleton animations for loading states</p>
+        </div>
+        
+        <div class="flex flex-col gap-lg" style="max-width: 400px;">
+            <div class="flex items-center gap-md">
+                <div class="skeleton skeleton-avatar"></div>
+                <div class="flex-1">
+                    <div class="skeleton skeleton-title" style="width: 60%;"></div>
+                    <div class="skeleton skeleton-text" style="width: 80%;"></div>
+                </div>
+            </div>
+            
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width: 90%;"></div>
+            <div class="skeleton skeleton-text" style="width: 75%;"></div>
+        </div>
+        
+        <div class="code-block mt-lg">
+            <div class="code-header">
+                <span class="code-language">HTML</span>
+            </div>
+            <div class="code-content"><code>&lt;div class="skeleton skeleton-avatar"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;</code></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Card Skeleton</h2>
+    
+    <div class="glass-card">
+        <div class="glass-card-header">
+            <h3 class="glass-card-title">Loading Card</h3>
+            <p class="glass-card-subtitle">Full card skeleton placeholder</p>
+        </div>
+        
+        <div class="component-grid">
+            <div class="glass-card">
+                <div class="skeleton skeleton-card" style="margin-bottom: 1rem;"></div>
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text" style="width: 70%;"></div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="skeleton skeleton-card" style="margin-bottom: 1rem;"></div>
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text" style="width: 85%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
