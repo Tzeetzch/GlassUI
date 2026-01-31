@@ -1,3 +1,251 @@
+/* ========================================
+   SLIDER / RANGE
+   ======================================== */
+.slider {
+    width: 100%;
+    max-width: 400px;
+    margin: var(--spacing-md) 0;
+    background: transparent;
+}
+.slider::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(90deg, var(--gradient-primary), var(--gradient-accent));
+    border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px var(--glow-primary);
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: var(--bg-glass);
+    border: 2px solid var(--gradient-primary);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 0 4px var(--glow-primary);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    cursor: pointer;
+    margin-top: -9px;
+}
+.slider:focus::-webkit-slider-thumb {
+    border-color: var(--gradient-accent);
+    box-shadow: 0 0 0 6px var(--glow-accent);
+}
+.slider::-ms-fill-lower {
+    background: var(--gradient-primary);
+}
+.slider::-ms-fill-upper {
+    background: var(--gradient-accent);
+}
+.slider:focus {
+    outline: none;
+}
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: var(--bg-glass);
+    border: 2px solid var(--gradient-primary);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 0 4px var(--glow-primary);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    cursor: pointer;
+}
+.slider:focus::-moz-range-thumb {
+    border-color: var(--gradient-accent);
+    box-shadow: 0 0 0 6px var(--glow-accent);
+}
+.slider::-moz-range-track {
+    height: 6px;
+    background: linear-gradient(90deg, var(--gradient-primary), var(--gradient-accent));
+    border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px var(--glow-primary);
+}
+.slider::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    background: var(--bg-glass);
+    border: 2px solid var(--gradient-primary);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 0 4px var(--glow-primary);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    cursor: pointer;
+}
+.slider:focus::-ms-thumb {
+    border-color: var(--gradient-accent);
+    box-shadow: 0 0 0 6px var(--glow-accent);
+}
+.slider:focus {
+    outline: none;
+}
+.slider::-ms-tooltip {
+    display: none;
+}
+/* ========================================
+   DATE PICKER
+   ======================================== */
+.datepicker {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    box-shadow: 0 2px 12px var(--glow-primary);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.datepicker:focus {
+    border-color: var(--gradient-primary);
+    box-shadow: 0 0 0 2px var(--glow-primary);
+}
+.datepicker::-webkit-calendar-picker-indicator {
+    filter: invert(0.7);
+    opacity: 0.8;
+}
+/* ========================================
+   PAGINATION
+   ======================================== */
+.pagination {
+    display: flex;
+    gap: var(--spacing-xs);
+    list-style: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-glass);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 12px var(--glow-primary);
+    border: 1px solid var(--border-glass);
+    align-items: center;
+}
+.page-item {
+    display: flex;
+    align-items: center;
+}
+.page-item a, .page-item span {
+    display: block;
+    min-width: 2.25rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+.page-item a:hover {
+    background: var(--bg-glass-hover);
+    color: var(--gradient-primary);
+}
+.page-item.active span, .page-item.active a {
+    background: linear-gradient(135deg, var(--gradient-primary), var(--gradient-accent));
+    color: var(--text-primary);
+    font-weight: 700;
+    box-shadow: 0 0 12px var(--glow-primary);
+}
+.page-item.disabled span, .page-item.disabled a {
+    color: var(--text-tertiary);
+    cursor: not-allowed;
+    background: none;
+}
+/* ========================================
+   BREADCRUMBS
+   ======================================== */
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-glass);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 12px var(--glow-primary);
+    border: 1px solid var(--border-glass);
+}
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+.breadcrumb-item a {
+    color: var(--gradient-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+.breadcrumb-item a:hover {
+    color: var(--gradient-accent);
+    text-decoration: underline;
+}
+.breadcrumb-item.active {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 0 var(--spacing-xs);
+    color: var(--text-tertiary);
+}
+/* ========================================
+   ACCORDION
+   ======================================== */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.accordion-item {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 2px 16px var(--glow-primary);
+    overflow: hidden;
+    transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+.accordion-item.open {
+    box-shadow: 0 4px 32px var(--glow-primary);
+    border-color: var(--gradient-primary);
+}
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: var(--spacing-lg);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    outline: none;
+    transition: color var(--transition-fast);
+}
+.accordion-header:hover, .accordion-header:focus {
+    color: var(--gradient-primary);
+}
+.accordion-chevron {
+    transition: transform var(--transition-fast);
+    margin-left: var(--spacing-md);
+    color: var(--gradient-primary);
+}
+.accordion-item.open .accordion-chevron {
+    transform: rotate(90deg);
+}
+.accordion-body {
+    padding: var(--spacing-lg);
+    color: var(--text-secondary);
+    background: var(--bg-glass-hover);
+    border-top: 1px solid var(--border-glass-light);
+    animation: accordion-fade-in 0.25s;
+}
+@keyframes accordion-fade-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /* ============================================
    GlassUI - Dark Glassmorphism Component Library
    ============================================ */

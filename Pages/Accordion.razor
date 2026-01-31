@@ -1,0 +1,43 @@
+@page "/accordion"
+
+<div class="page-header">
+    <h1 class="page-title">Accordion</h1>
+    <p class="page-description">Expandable/collapsible panels for showing and hiding content.</p>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Basic Accordion</h2>
+    <div class="accordion">
+        <AccordionItem Title="What is GlassUI?">
+            GlassUI is a modern glassmorphism CSS component library for Blazor.
+        </AccordionItem>
+        <AccordionItem Title="Is it themeable?">
+            Yes! Try switching color themes from the sidebar.
+        </AccordionItem>
+        <AccordionItem Title="Is it open source?">
+            Absolutely. MIT licensed.
+        </AccordionItem>
+    </div>
+</section>
+
+@code {
+    private int openIndex = 0;
+
+    public class AccordionItem : ComponentBase
+    {
+        [Parameter] public string Title { get; set; }
+        [Parameter] public RenderFragment ChildContent { get; set; }
+        [CascadingParameter] public Accordion ParentAccordion { get; set; }
+        [CascadingParameter] public int Index { get; set; }
+        protected override void OnInitialized()
+        {
+            ParentAccordion?.RegisterItem(this);
+        }
+    }
+
+    public class Accordion : ComponentBase
+    {
+        private List<AccordionItem> items = new();
+        public void RegisterItem(AccordionItem item) => items.Add(item);
+    }
+}
