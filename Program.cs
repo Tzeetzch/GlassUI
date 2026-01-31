@@ -1,3 +1,11 @@
+namespace GlassUI
+{
+	public static class AppInfo
+	{
+		public const string Version = "v1.1.0";
+	}
+}
+
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using GlassUI;
