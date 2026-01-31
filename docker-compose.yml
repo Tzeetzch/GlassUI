@@ -1,0 +1,13 @@
+services:
+  glassui:
+    build: .
+    container_name: glassui
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    # Optional: Add labels for Traefik reverse proxy
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.glassui.rule=Host(`glassui.yourdomain.com`)"
+    #   - "traefik.http.routers.glassui.entrypoints=websecure"
+    #   - "traefik.http.routers.glassui.tls.certresolver=letsencrypt"
