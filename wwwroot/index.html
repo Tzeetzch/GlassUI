@@ -49,15 +49,27 @@
         };
         
         window.setThemeClass = function(className) {
-            // Remove all theme- classes
+            // Remove all theme- classes (convert to array first to avoid mutation during iteration)
+            var classesToRemove = [];
             document.body.classList.forEach(c => {
                 if (c.startsWith('theme-')) {
-                    document.body.classList.remove(c);
+                    classesToRemove.push(c);
                 }
             });
+            classesToRemove.forEach(c => document.body.classList.remove(c));
             // Add new class
             document.body.classList.add(className);
+            // Save to localStorage so theme persists
+            localStorage.setItem('glassui-theme', className);
         };
+        
+        // Apply saved theme on page load
+        (function() {
+            var savedTheme = localStorage.getItem('glassui-theme');
+            if (savedTheme) {
+                document.body.classList.add(savedTheme);
+            }
+        })();
     </script>
 </body>
 
