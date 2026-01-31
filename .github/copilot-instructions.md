@@ -108,7 +108,10 @@ All components use class-based styling. Key patterns:
 ---
 
 ## Existing Components
-Buttons, Cards, Inputs, Checkboxes, Radios, Toggles, Badges, Avatars, Alerts, Progress, Modals, Tables, Tabs, Dropdowns, Tooltips, Toasts, Code Blocks, Skeleton Loaders, 12 Background Styles
+Buttons, Cards, Inputs, Checkboxes, Radios, Toggles, Badges, Avatars, Alerts, Progress, Modals, Tables, Tabs, Dropdowns, Tooltips, Toasts, Code Blocks, Skeleton Loaders, 12 Background Styles, 8 Color Themes
 
 ## Planned/Missing Components
 Accordion, Breadcrumbs, Pagination, Date Picker, Slider/Range
+
+## Color Themes
+Use `theme-*` class on body: `theme-purple-cyan` (default), `theme-ocean`, `theme-sunset`, `theme-forest`, `theme-rose`, `theme-amber`, `theme-mono`, `theme-crimson`

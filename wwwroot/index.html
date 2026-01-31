@@ -47,6 +47,17 @@
             // Add new class
             document.body.classList.add(className);
         };
+        
+        window.setThemeClass = function(className) {
+            // Remove all theme- classes
+            document.body.classList.forEach(c => {
+                if (c.startsWith('theme-')) {
+                    document.body.classList.remove(c);
+                }
+            });
+            // Add new class
+            document.body.classList.add(className);
+        };
     </script>
 </body>
 

@@ -233,6 +233,7 @@ Opens at: `https://localhost:5001` or `http://localhost:5000`
 - [x] Dropdown menus ✅
 - [x] Tooltips ✅
 - [x] Toasts ✅
+- [x] Color Themes ✅ (8 themes)
 - [ ] Accordion
 - [ ] Toast notifications
 - [ ] Accordion/Collapsible
