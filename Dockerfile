@@ -11,7 +11,7 @@ COPY . .
 RUN dotnet publish -c Release -o /app/publish
 
 # Runtime stage - nginx to serve static files
-FROM nginx:alpine AS final
+FROM docker.io/library/nginx:alpine AS final
 WORKDIR /usr/share/nginx/html
 
 # Remove default nginx content
